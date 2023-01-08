@@ -48,7 +48,7 @@ function displayData() {
 	if (names.length > 0) {
 		for (i = 0; i < names.length; i++) {
 			data += '<tr>';
-			data += '<td>' + names[i] + '</td>' + '<td>' + names[i] + '</td>';
+			data += '<td>' + names[i] + '</td>';
 			data += '<td colspan="2"><center><button class="btn btn-warning" onclick="Edit(' + i + ')"><span class="glyphicon glyphicon-edit"></span> Edit</button> | <button class="btn btn-danger" onclick="Delete(' + i + ')"><span class="glyphicon glyphicon-trash"></span> Delete</button></center></td>';
 			data += '</tr>';
 		}
