@@ -1,52 +1,123 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>updated-app Verified: 03:40:32 PM</title>
-        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-    </head>
+  <head>
+      <title>Welcome to the Web Development Workshop 03:47:02 PM</title>
+      <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+      <style>
+          .jumbotron {
+              background-color: #337ab7; /* Bootstrap Primary Blue */
+              color: white;
+              padding: 50px;
+              margin-bottom: 30px;
+              text-align: center;
+          }
+          .session-panel {
+              margin-bottom: 25px;
+          }
+          .session-panel .panel-heading {
+              font-size: 1.2em;
+              font-weight: bold;
+          }
+      </style>
+  </head>
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid"><h1>Latest Deployment Time: 12/6/2025, 3:40:32 PM</h1></div>
-    </nav>
-    <div class="col-md-3"></div>
-    <div class="col-md-6 well">
-        <hr style="border-top:1px dotted #ccc;"/>
-        <div class="col-md-8">
-            <table class="table table-bordered">
-                <thead class="alert-info">
-                    <tr>
-                        <th>Name</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody id="result"></tbody>
-            </table>
-        </div>
-        <div class="col-md-4">
-            <div id="create">
-                <form action="javascript:void(0);" method="POST" class="form-group" onsubmit="Create()">
-                    <label>Full Name:</label>
-                    <input type="text" id="name" class="form-control"/>
-                    <br/>
-                    <center><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Create</button></center>
-                </form>
-            </div>
-            <div id="edit">
-                <form action="javascript:void(0);" method="POST" class="form-group" id="update">
-                    <label>Full Name Verified:</label>
-                    <input type="text" id="update_name" class="form-control"/>
-                    <br/>
-                    <center>
-                        <button type="submit" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span> Update</button>
-                        <button class="btn btn-danger" onclick="editHider()">&#10006; Close</button>
-                    </center>
-                </form>
-            </div>
-        </div>
-    </div>
-</body>
-<script src="js/script.js"></script>
+  <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <a class="navbar-brand" href="#">Workshop Hub 🛠️</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="#about">About</a></li>
+              <li><a href="#schedule">Schedule</a></li>
+              <li><a href="#resources">Resources</a></li>
+          </ul>
+      </div>
+  </nav>
+  
+  <div class="container">
+      
+      <div class="jumbotron">
+          <h1>Welcome to the Full-Stack Mastery Workshop!</h1>
+          <p class="lead">Your hands-on guide to building modern, robust web applications.</p>
+          <p>We are thrilled to have you! Let's get started on this exciting learning journey.</p>
+          <p>
+              <a class="btn btn-warning btn-lg" href="#schedule" role="button">View Schedule</a>
+          </p>
+      </div>
+      
+      <div class="row" id="about">
+          <div class="col-md-12">
+              <div class="panel panel-default">
+                  <div class="panel-heading">
+                      <h3 class="panel-title">🎯 Workshop Goal</h3>
+                  </div>
+                  <div class="panel-body">
+                      This workshop is designed to transition you from theoretical understanding to practical application. Over the next few sessions, you will build a complete, production-ready application from the ground up, focusing on best practices in **development** 
+
+[Image of Development Process Diagram]
+
+and **deployment**.
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <hr>
+
+      <div class="row" id="schedule">
+          <h2 class="text-center">📚 Workshop Schedule & Sessions</h2>
+          <div class="col-md-4">
+              <div class="panel panel-primary session-panel">
+                  <div class="panel-heading">Session 1: Setup & Foundations</div>
+                  <div class="panel-body">
+                      * Environment setup (Node.js, Git)
+                      * Introduction to core principles
+                      * **Hands-on:** Setting up your project repository
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="panel panel-success session-panel">
+                  <div class="panel-heading">Session 2: Backend Development</div>
+                  <div class="panel-body">
+                      * Building RESTful APIs with Express
+                      * Database integration (MongoDB/SQL)
+                      * **Hands-on:** Creating your first API endpoint
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="panel panel-info session-panel">
+                  <div class="panel-heading">Session 3: Frontend & Deployment</div>
+                  <div class="panel-body">
+                      * Introduction to React components
+                      * Connecting client to server
+                      * *Hands-on:** Deploying the app to the cloud
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <hr>
+
+      <div class="row" id="resources">
+          <div class="col-md-12">
+              <h2 class="text-center">🔗 Key Resources & Next Steps</h2>
+              <div class="list-group">
+                  <a href="#" class="list-group-item active">Download Workshop Slides (PDF)</a>
+                  <a href="#" class="list-group-item">Join our Slack/Discord Channel</a>
+                  <a href="#" class="list-group-item">Access the GitHub Starter Code</a>
+                  <a href="#" class="list-group-item">Complete the Pre-Workshop Survey</a>
+              </div>
+          </div>
+      </div>
+      
+  </div> <footer class="text-center" style="margin-top: 50px; padding: 20px; background-color: #333; color: white;">
+      <p>&copy; 2025 Web Development Workshop. Thank you for attending!</p>
+  </footer>
+
+  </body>
 </html>
-        
+      
