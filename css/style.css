@@ -1,0 +1,159 @@
+:root {
+    --color-primary: #4f46e5; /* indigo-600 */
+    --color-primary-hover: #4338ca; /* indigo-700 */
+    --color-background-light: #f8fafc; /* slate-50 */
+    --color-background-card-light: #ffffff; /* white */
+    --color-text-light: #1e293b; /* slate-900 */
+    --color-text-secondary-light: #475569; /* slate-600 */
+    --color-border-light: #e2e8f0; /* slate-200 */
+    --color-input-border-light: #cbd5e1; /* slate-300 */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background-dark: #020617; /* slate-950 */
+        --color-background-card-dark: #0f172a; /* slate-900 */
+        --color-text-dark: #f8fafc; /* slate-50 */
+        --color-text-secondary-dark: #cbd5e1; /* slate-300 */
+        --color-border-dark: #1e293b; /* slate-800 */
+        --color-input-border-dark: #334155; /* slate-700 */
+    }
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--color-background-light);
+    color: var(--color-text-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-dark);
+}
+
+/* Utility classes mimicking Tailwind */
+.bg-slate-50 { background-color: var(--color-background-light); }
+.dark\:bg-slate-950 { background-color: var(--color-background-dark); }
+.text-slate-900 { color: var(--color-text-light); }
+.dark\:text-slate-100 { color: var(--color-text-dark); }
+.transition-colors { transition-property: background-color, border-color, color, fill, stroke; }
+.duration-300 { transition-duration: 300ms; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+.max-w-2xl { max-width: 42rem; }
+.text-center { text-align: center; }
+.mb-10 { margin-bottom: 2.5rem; }
+.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+.font-bold { font-weight: 700; }
+.text-slate-800 { color: #1e293b; } /* Custom for headings */
+.dark\:text-slate-50 { color: var(--color-text-dark); }
+.mb-4 { margin-bottom: 1rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.text-slate-600 { color: var(--color-text-secondary-light); }
+.dark\:text-slate-300 { color: var(--color-text-secondary-dark); }
+
+.bg-white { background-color: var(--color-background-card-light); }
+.dark\:bg-slate-900 { background-color: var(--color-background-card-dark); }
+.rounded-xl { border-radius: 0.75rem; }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+.border { border-width: 1px; border-style: solid; }
+.border-slate-200 { border-color: var(--color-border-light); }
+.dark\:border-slate-800 { border-color: var(--color-border-dark); }
+.p-8 { padding: 2rem; }
+.md\:p-10 { padding: 2.5rem; } /* For medium screens and up */
+.space-y-6 > *:not([hidden]) ~ *:not([hidden]) { margin-top: 1.5rem; }
+
+.block { display: block; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.font-medium { font-weight: 500; }
+.text-slate-700 { color: #334155; } /* Custom for labels */
+.dark\:text-slate-200 { color: #e2e8f0; } /* Custom for labels dark */
+.mb-2 { margin-bottom: 0.5rem; }
+.text-red-500 { color: #ef4444; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.left-3 { left: 0.75rem; }
+.top-1\/2 { top: 50%; }
+.-translate-y-1\/2 { transform: translateY(-50%); }
+.text-slate-400 { color: #94a3b8; }
+.dark\:text-slate-500 { color: #64748b; }
+.pl-10 { padding-left: 2.5rem; }
+.mt-1 { margin-top: 0.25rem; }
+.hidden { display: none !important; }
+.w-full { width: 100%; }
+.mt-4 { margin-top: 1rem; }
+
+/* Form Input Styling */
+.form-input {
+    display: block;
+    width: 100%;
+    padding: 0.625rem 1rem; /* py-2.5 px-4 */
+    border: 1px solid var(--color-input-border-light);
+    border-radius: 0.5rem; /* rounded-lg */
+    background-color: var(--color-background-card-light);
+    color: var(--color-text-light);
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2); /* focus:ring-2 focus:ring-indigo-500/20 */
+}
+
+body.dark .form-input {
+    background-color: var(--color-background-card-dark);
+    color: var(--color-text-dark);
+    border-color: var(--color-input-border-dark);
+}
+
+body.dark .form-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+}
+
+textarea.form-input {
+    resize: vertical;
+    min-height: 8rem;
+    padding-top: 1rem;
+}
+
+/* Primary Button Styling */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem 1rem; /* px-4 py-2.5 */
+    background-color: var(--color-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5rem; /* rounded-lg */
+    font-weight: 500; /* font-medium */
+    font-size: 1rem;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* hover:shadow-md */
+}
+
+.btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.4); /* focus:ring-2 focus:ring-indigo-500/40 */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .md\:p-10 { padding: 2.5rem; }
+}
+
+/* Dark mode toggle (manual for this vanilla setup) */
+/* You would typically add a JS function to toggle a 'dark' class on the body */
+/* For demonstration, you can manually add 'dark' class to <body> tag */
